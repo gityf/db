@@ -1,5 +1,5 @@
 /*
-** Copyright (C) 2015 www.xiaojukeji.com
+** Copyright (C) 2015 Wang Yaofu
 ** All rights reserved.
 **
 **Author:Wang Yaofu voipman@qq.com

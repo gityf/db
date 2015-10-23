@@ -1,3 +1,10 @@
+/*
+** Copyright (C) 2015 Wang Yaofu
+** All rights reserved.
+**
+**Author:Wang Yaofu voipman@qq.com
+**Description: The source file of class MySQLQuery.
+*/
 #include <memory>
 #include <mysqld_error.h>
 #include "MySQLQuery.hpp"

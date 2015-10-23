@@ -1,3 +1,10 @@
+/*
+** Copyright (C) 2015 Wang Yaofu
+** All rights reserved.
+**
+**Author:Wang Yaofu voipman@qq.com
+**Description: The source file of class OracleDB.
+*/
 #include "log/log.h"
 #include "oracledb.h"
 

@@ -1,3 +1,10 @@
+/*
+** Copyright (C) 2015 Wang Yaofu
+** All rights reserved.
+**
+**Author:Wang Yaofu voipman@qq.com
+**Description: The source file of testing class OracleDB.
+*/
 #include <iostream>
 using namespace std;
 #include <stdio.h>

@@ -1,3 +1,10 @@
+/*
+** Copyright (C) 2015 Wang Yaofu
+** All rights reserved.
+**
+**Author:Wang Yaofu voipman@qq.com
+**Description: The source file of class MySQLConn.
+*/
 #include "MySQLConn.hpp"
 #include <assert.h>
 #include "log/log.h"
