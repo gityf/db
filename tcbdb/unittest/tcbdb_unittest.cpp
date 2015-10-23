@@ -34,7 +34,25 @@ TEST(TcbDBTest, BasicTest) {
     status = tcbDb.putDup(key, "v2");
     EXPECT_EQ(status, 0);
     EXPECT_EQ(16, tcbDb.valueSizeOfKey(key));
+    std::vector<std::string> values;
+    tcbDb.getPrefix("key", 2, values);
+    EXPECT_EQ(64, values.size());
+    EXPECT_EQ(values[0], "key123");
+    EXPECT_EQ(2, tcbDb.keyCounts());
 
+    TEST_INFO("db size:%d", tcbDb.dbSize());
+    tcbDb.put("k1", "v1");
+    tcbDb.put("k2", "v2");
+    tcbDb.put("k3", "v3");
+    tcbDb.put("k4", "v4");
+    EXPECT_EQ(6, tcbDb.keyCounts());
+    values.clear();
+    tcbDb.multiGet("k", "l", 10, values);
+    for (size_t ii = 0; ii < values.size(); ++ii) {
+        TEST_INFO("id:%d,value:%s", ii, values[ii].c_str());
+    }
     status = tcbDb.del(key);
     EXPECT_EQ(status, 0);
+    tcbDb.destory();
+    toDb.destory();
 }
