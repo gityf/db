@@ -30,7 +30,10 @@ public:
     int rollback();
     int commit();
 
+    // for CREATE,UPDATE,DELETE,SELECT SQL etc.
     int execute(const std::string& query, bool isSelect = false);
+    // for SELECT SQL.
+    int select(const std::string& query);
     int next(std::vector<char*>& row);
 
     std::string getDbPath();

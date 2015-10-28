@@ -83,6 +83,10 @@ int Sqlite3Query::execute(const std::string& query, bool isSelect) {
     return OK;
 }
 
+int Sqlite3Query::select(const std::string& query) {
+    return execute(query, true);
+}
+
 int Sqlite3Query::next(std::vector<char*>& row_data) {
     if (rowOffset_ >= rows_) {
         return NORESULT;
