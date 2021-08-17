@@ -20,9 +20,13 @@ public:
     explicit LevelDB();
     virtual ~LevelDB();
 
+    // open db file.
     int Open(const std::string& db);
+    // put key/value pair into db.
     int Put(const std::string& key, const std::string& value);
+    // get value of key, param value is out value.
     int Get(const std::string& key, std::string& value);
+    // to delete key from db.
     int Del(const std::string& key);
 
 private:
